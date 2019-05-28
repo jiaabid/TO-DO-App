@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="app.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!--mediaquery-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    
+<!--    all the jqueries-->
+    <script>
+    
+      $(document).ready(function(){
+    $('.modal').modal();
+  });
+        $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+    
+         $(document).ready(function(){
+    $('input.autocomplete').autocomplete()});
+    </script>
+    
+    
+</head>
+    <body >
+        <div class="wrapper col s12 m12 hide-on-large-only">
+        <header>
+        <img src="images/banner2.jpg" class="responsive-img">
+            <div class="container center-align" id="head"><p>TO-DO APP</p></div>
+            
+    </header>
+            <main class="section">
+                <br>
+                <p id="to"><i>Things To do...</i> </p>
+<!--            whatever the list you add-->
+            <div class="row " id="main-list">
+                
+                   
+                        <div class="card green lighten-4">
+                            
+                        <div class="card-content">
+                            <p id="first" style="text-align: right;"></p>
+                            <label>
+                                <input type="checkbox"  class="check">
+                            <span id="string">i have to make to do list</span>
+                                </label>
+                        
+                            <a href="#!" class="remove"><i class="material-icons right ">delete</i></a>
+                                <a href="#modal" class="modal-trigger" onclick="edit"><i class="material-icons right">edit</i></a>
+                            
+                            </div>
+                        </div>              
+                
+                </div>
+<!--                button to add the item-->
+                <div class="row">
+                <div class="fixed-action-btn">  
+                    <a class="btn-floating btn-large  green darken-4 modal-trigger" href="#modal"> <i class="large material-icons">add</i></a>
+                    <div class="modal modal-fixed-footer " id="modal">
+                    <div class="modal-content">
+                         <div class="modal-title">
+                        <h5 id="title">TO-DO</h5>
+                     <div id="date">123</div>
+                        </div><br>
+                        <div class="container">
+                        <div class="input-field">
+                        <label for="list">What to do ?</label>
+                            <textarea type="text" id="list" name="task1" class="materialize-textarea" ></textarea>
+                        </div>
+                            <button type="submit" id="submit" class="floating-btn "><i class="material-icons">add</i></button>
+                            </div>
+                    </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close btn-flat  waves-effect waves-green ">Done</a>
+                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                        </div>
+                    </div>
+                    </div>
+    
+                
+                </div>
+            </main>
+            </div>
+            <footer >
+            <div class="row">
+                
+                <div class="footer-copyright grey darken-4 white-text">
+                     © 2019 Copyright</div>
+            </div>
+            </footer>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
